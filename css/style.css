@@ -1,0 +1,584 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+:root{
+    --black:#2b2a2c;
+    --grey:#6a696b;
+    --light-grey:#717072;
+    --white:#ffffff;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color:var(--black);
+    scroll-behavior: smooth;
+    
+}
+html{
+     scroll-behavior: smooth;
+}
+.wrapper{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+}
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.logo{
+    margin-top: 20px;
+    display: flex;
+}
+.logo-image{
+    border-radius: 50%;
+}
+.logo_text{
+    margin-left: 10px;
+}
+.logo_name{
+    font-weight: bold;
+    font-size:1rem;
+}
+.logo_profession{
+    font-weight:  400;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #6a696b;
+}
+.menu{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-link{
+    text-decoration: none;
+    font-weight:700;
+    font-size: 14px;
+    color:var(--black);
+    margin-right: 50px;
+    position: relative;
+}
+.menu-link:last-child{
+    margin-right: 0px;
+}
+.menu-link::after{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color:var(--black);
+    top:20px;
+    left:1px;
+    opacity:1;
+    transition: width 0.4s ease-out;
+}
+.menu-link:hover::after{
+    width: 100%;
+}
+.menu-link:focus:after {
+	width: 100%; 
+}
+.present .wrapper {
+    display: flex;
+    border-bottom:2px solid rgba(113, 112, 114, 0.158);
+    margin-top: 30px;
+    justify-content:space-between;
+}
+.present_inner{
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+h1{
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    color:var(--black)
+}
+h2{
+    font-weight:400;
+    font-size: 32px;
+    color:var(--black)
+}
+.present-profession{
+    color:var(--grey);
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.present_icons{
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+.present_icons-image{
+    margin-right: 10px;
+}
+.present_link{
+    text-decoration: none;
+}
+.btn{
+    width: 200px;
+    cursor: pointer;
+    background-color: var(--white);
+    color:#2b2a2c;
+    border:1px solid #2b2a2c;
+    border-radius:25px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.btn:hover{
+    border:1px solid blue;
+    color:blue ;
+}
+.present_image{
+    margin-bottom:10px;
+}
+.my-works .wrapper{
+    padding-top:40px;
+}
+.my-works h1{
+    text-align:center ;
+}
+.my-works_inner{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+.my-works_product{
+    border-radius: 10px;
+    box-shadow: rgba(113, 112, 114, 0.158) 0px 1px 1px 1px;
+}
+.my-works_product-category{
+    font-size: 12 px;
+    font-weight: 400;
+    color: #2b2a2c;
+    margin:18px 15px;
+}
+.my-works_product-text{
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    margin:0px 15px 18px 15px;
+}
+.about-me .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 115px 0 ;
+}
+.about-me_inner{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex:0 0 60%;
+    height:100%;
+    padding-top: 90px;
+}
+.about-me_big-text{
+    font-size: 92px;
+    font-weight: 700;
+    color:  #dedede;
+}
+.about-me_text{
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--light-grey);
+    margin:50px 0;
+    line-height: 24px;
+}
+.abzac{
+    background: #332f30 url(/image/reviews.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.abzac__text{
+    color:var(--white);
+    font-weight: 250;
+    font-size: 14px;
+    line-height: 32px;
+    width: 800px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.abzac::after{
+    content: url(/image/udemy_logo.png);
+    position: absolute;
+    top:76%;
+}
+.udemy{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.udemy_inner{
+    padding-top: 65px;
+}
+.udemy_txt{
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 700;
+}
+.udemy_student{
+    font-size: 14px;
+    line-height: 32px;
+    color: #717072;
+    font-weight: 400;
+    font-style: italic;
+}
+.my-courses{
+    display: flex;
+    text-align: center;
+}
+.my-courses_tittle{
+    margin-top: 100px;
+}
+.my-courses-text{
+    font-size: 18px;
+    line-height: 32px;
+    color: #717072;
+    font-weight: 300;
+}
+.my-courses_content{
+    margin-top:50px;
+    display: flex;
+}
+.my-courses_content-inner{
+    text-align: left;
+    justify-content: space-around;
+    width: 33%;
+}
+.my-courses_content-tittle{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color: #2b2a2c;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.my-courses_content-category{
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color: #2b2a2c;
+    font-weight: 400;
+    padding-top: 15px;   
+}
+.my-courses_content-text{
+    font-size: 12px;
+    line-height: 24px;
+    color: #717072;
+    font-weight: 300;
+    padding-top: 25px;
+    margin-bottom:40px;
+    width: 95%;
+}
+.my-courses_content-link{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color: #717072;
+    font-weight: 400;
+    text-align: center;
+}
+footer{
+    background-color: #2b2a2c;
+    margin-top:120px ;
+}
+.footer .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.footer_inner{
+    display: flex;
+    align-items: center;
+    margin:15px 0;
+}
+.footer_icons{
+    margin-left: 35px;
+    position: relative;
+}
+.footer_year-name{
+    font-size: 14px;
+    color: #8d8d8e;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+.footer_menu{
+    align-items: center;
+    display: flex;
+}
+.footer_menu-link{
+    font-size: 14px;
+    line-height: 15px;
+    color: #8d8d8e;
+    font-weight: 400;
+    font-family: "Montserrat";
+    padding-left: 20px;
+    text-decoration:none;
+}
+.footer_icons::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 21px;
+    background-color: #413f41;
+    left:-20px;
+}
+
+.modal{
+    display:none;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: 0;
+    z-index: 1000;
+    padding: 16px;
+    background:#504f52b7;
+    position:fixed;
+    overflow: auto;
+}
+.modal_window{
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+.modal_title{
+    background:#504f52b7;
+    font-size: 30px;
+    padding-top:20px;
+    background-color: white;
+}
+.modal_photo{
+    width: 100%;
+    height: 100%;
+}
+.modal_btn{
+    height: 50px;
+    background-color: white;
+}
+.btn--modal{
+    text-decoration: none;
+    z-index: 1500;
+}
+.hide{
+    display:flex;
+}
+@media(max-width:1199px){
+    .wrapper{
+        padding-left:15px;
+        padding-right: 15px;
+    }
+    .my-works .wrapper{
+        padding-top: 30px;
+    }
+    .menu{
+        margin-top: 20px;
+    }
+    .present_image{
+        width: 100%;
+    }
+    .present_inner{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin:20px;
+    }
+    .wrapper-present{
+        flex-wrap:wrap-reverse;
+    }
+    .my-works_inner{
+        flex-wrap: wrap;
+    }
+    .my-works_product{
+        width: 100%;
+        margin-top:20px;
+        border-radius: 30px;
+    }
+    .my-works_product-image{
+        width: 100%;
+        border-radius: 30px;
+    }
+    .my-works_product-category{
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+    .my-works_product-text{
+        justify-content: space-between;
+        font-size: 25px;
+    }
+    .about-me .wrapper{
+        padding: 40px;
+        flex-wrap: wrap;
+    }
+    .about-me_image{
+        height: 100%;
+        width: 100%;
+    }
+    .about-me_inner{
+        text-align: center;
+        align-items: center;
+        padding-top:0px;
+        height: 610px;
+        flex:1 0 100%;
+    }
+    .about-me_big-text{
+        font-size: 40px;
+    }
+    .about-me_text{
+        margin:10px 5px 30px 5px;
+    }
+    .my-courses_tittle{
+        margin-top: 30px;
+    }
+    .my-courses_content{
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .my-courses_content-inner{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .my-courses_image{
+        width: 100%;
+    }
+    .my-courses_content-text{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    footer{
+        margin-top:35px;
+    }
+}
+@media(max-width:767px){
+    .logo{
+        display:none;
+    }
+    header .wrapper{
+        padding:0 5px;
+    }
+    .menu{
+        width: 100%;
+        justify-content: center;
+        border-bottom:1px solid rgba(82, 78, 78, 0.466);
+        padding-bottom: 15px;
+    }
+    .menu-link{
+        margin-right: 25px;
+    }
+    .btn{
+        font-size: 10px;
+        padding: 5px 20px;
+    }
+    .present .wrapper{
+        margin-top: 10px;
+    }
+    .present_inner{
+        margin: 10px;
+    }
+    .present_inner>h2{
+        font-size:20px;
+    }
+    .present_inner>h1{
+        font-size: 30px;
+    }
+    .present-profession{
+        margin:15px
+    }
+    .present_icons{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .present_icons-image-last{
+        margin-right: 0px;
+    }
+    .present_icons-image{
+        width: 35px;
+    }
+    .my-works_product{
+        width: 100%;
+        margin-top:10px;
+        border-radius: 30px;
+    }
+    .my-works_product-image{
+        width: 100%;
+        border-radius: 30px;
+    }
+    .my-works_product-category{
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+    .my-works_product-text{
+        justify-content: space-between;
+        font-size: 15px;
+    }
+    .about-me .wrapper{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .about-me_inner{
+        padding-top: 55px;
+        margin-bottom: 10px;
+    }
+    .about-me_big-text{
+        font-size:25px ;
+    }
+    .about-me_text{
+        font-size:10px ;
+    }
+    .abzac__text{
+        font-size: 10px;
+        position: relative;
+    }
+    .abzac::after{
+        top:81%
+    }
+    .my-courses_tittle{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .my-courses_content{
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .my-courses-text{
+        font-size: 15px;
+    }
+    .my-courses_content-inner{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .my-courses_image{
+        width: 100%;
+    }
+    .my-courses_content-text{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .my-courses_content-link{
+        padding: 20;
+    }
+    .footer_menu{
+        display: none;
+    }
+}
