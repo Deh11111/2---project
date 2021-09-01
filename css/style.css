@@ -212,7 +212,7 @@ h2{
     padding-bottom: 60px;
 }
 .abzac::after{
-    content: url(/image/udemy_logo.png);
+    content: url(../image/udemy_logo.png);
     position: absolute;
     top:76%;
 }
